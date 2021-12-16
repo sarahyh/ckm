@@ -3,4 +3,15 @@ CLEAR Knowledge Management (CKM) is a web-based interactive system for systemati
 
 
 Google firebase is used to host this project:
-- https://evidence-extraction-multiple.web.app
+- https://evidence-extraction-multiple.web.app - no login required and includes some example data for demo.
+- https://evidence-extraction-eval.web.app - requires google login.
+
+
+How to run:
+- Download and install firebase (https://firebase.google.com/)
+- Set up your project, storage, and hosting in your firebase account.
+- You will need to be in a Firebase app directory where `firebase.json` is located.
+- firebase.json exists in www directory in this repository.
+- There are multiple targets specified in firebase.json.  You can choose one of the targets to run the application locally.
+e.g. run "firebase serve --only hosting:app-multiple"
+
