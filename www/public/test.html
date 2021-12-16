@@ -1,0 +1,61 @@
+<html>
+<head>
+
+<script src="js/library/jquery-3.4.1.min.js"></script>
+<script>
+
+$( document ).ready(function() {
+input.onfocus = function () {
+  datalist.style.display = 'block';
+}
+
+for (let option of datalist.options) {
+  option.onclick = function () {
+    input.value = this.value;
+    datalist.style.display = 'none';
+  }
+}
+
+datalist.style.width = input.offsetWidth + 'px';
+datalist.style.left = input.offsetLeft + 'px';
+datalist.style.top = input.offsetTop + input.offsetHeight + 'px';
+
+});
+
+</script>
+
+
+<style>
+datalist {
+  position: absolute;
+  background-color: lightgrey;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+}
+
+option {
+  background-color: #bbb;
+  padding: 4px;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body> Test
+
+<input
+  list=""
+  name="option"
+  id="input"
+  autocomplete="off"
+>
+
+<datalist id="datalist">
+  <option>Carrots</option>
+  <option>Peas</option>
+  <option>Beans</option>
+</datalist>
+
+</body>
+</html>
